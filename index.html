@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Resume Screening System
+    </title>
+
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f4f6f8;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+        .container {
+
+            width: 700px;
+
+            max-width: 90%;
+
+            margin: 50px auto;
+
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.1);
+
+        }
+
+
+        h1 {
+
+            text-align: center;
+
+            color: #222;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        h2 {
+
+            color: #333;
+
+            margin-top: 25px;
+
+        }
+
+
+        label {
+
+            display: block;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        input[type="text"] {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 6px;
+
+            box-sizing: border-box;
+
+            margin-bottom: 20px;
+
+            font-size: 15px;
+
+        }
+
+
+        textarea {
+
+            width: 100%;
+
+            height: 150px;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 6px;
+
+            box-sizing: border-box;
+
+            resize: vertical;
+
+            margin-bottom: 20px;
+
+            font-size: 15px;
+
+        }
+
+
+        .upload-box {
+
+            border: 2px dashed #999;
+
+            padding: 30px;
+
+            border-radius: 8px;
+
+            text-align: center;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        input[type="file"] {
+
+            font-size: 15px;
+
+        }
+
+
+        button {
+
+            width: 100%;
+
+            padding: 14px;
+
+            background-color: #333;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 6px;
+
+            font-size: 17px;
+
+            cursor: pointer;
+
+        }
+
+
+        button:hover {
+
+            background-color: #555;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <h1>
+
+        Resume Screening & Candidate
+        Recommendation System
+
+    </h1>
+
+
+    <form
+
+        action="/upload"
+
+        method="POST"
+
+        enctype="multipart/form-data"
+
+    >
+
+
+        <h2>
+
+            Job Details
+
+        </h2>
+
+
+        <label>
+
+            Job Title
+
+        </label>
+
+
+        <input
+
+            type="text"
+
+            name="job_title"
+
+            placeholder="Example: Python Developer"
+
+            required
+
+        >
+
+
+        <label>
+
+            Job Description / Required Skills
+
+        </label>
+
+
+        <textarea
+
+            name="job_description"
+
+            placeholder="Example: Python, Flask, SQL, MongoDB, Machine Learning"
+
+            required
+
+        ></textarea>
+
+
+        <h2>
+
+            Upload Resumes
+
+        </h2>
+
+
+        <div class="upload-box">
+
+
+            <p>
+
+                Select multiple PDF resumes
+
+            </p>
+
+
+            <input
+
+                type="file"
+
+                name="resumes"
+
+                accept=".pdf"
+
+                multiple
+
+                required
+
+            >
+
+
+        </div>
+
+
+        <button type="submit">
+
+            Screen & Rank Candidates
+
+        </button>
+
+
+    </form>
+
+
+</div>
+
+
+</body>
+
+</html>
